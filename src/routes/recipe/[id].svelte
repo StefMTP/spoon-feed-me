@@ -1,6 +1,6 @@
 <script context="module">
 	export const load = async ({ page }) => {
-		const apiKey = '62a9bf270d174ed2b4aba95e63da33c6';
+		const apiKey = process.env.SPOONACULAR_API_KEY;
 		const url = `https://api.spoonacular.com/recipes/${page.params.id}/information?apiKey=${apiKey}`;
 		const res = await fetch(url, {
 			method: 'GET',
